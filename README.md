@@ -14,3 +14,20 @@ FLASK_ENV=development flask run
 
 ## Install Heroku CLI
 brew tap heroku/brew && brew install heroku
+
+## Instantiate remote GIT
+(As of 17/04/2022 , the dashboard has been disabled for OAUTH - only CLI available) <br> <br>
+heroku git:remote -a flask-heroku-exercise
+<br> 
+To Check : git remote -v
+<br>
+
+## Deploy
+(To be done after pushing GIT through CLI as above) <br>
+git push heroku main 
+
+## To Run
+https://flask-heroku-exercise.herokuapp.com
+<br> OR <br>
+heroku run
+<br>
