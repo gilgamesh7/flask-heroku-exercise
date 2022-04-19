@@ -1,20 +1,23 @@
-# import os
-# from flask import Flask
-
-# app = Flask(__name__)
-# env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
-# app.config.from_object(env_config)
-
-
-# @app.route("/")
-# def index():
-#     secret_key = app.config.get("SECRET_KEY")
-#     return f"The configured secret key is {secret_key}."
+import os
+import sys
 
 from flask import Flask
 
-app = Flask(__name__)
+try :
+    app = Flask(__name__)
+
+    ENV=os.getenv("ENV","NOTSET")
+    SECRET_CODE=os.getenv("SECRET_CODE","NOTSET")
+
+    assert ENV !="NOTSET","ENV not set"
+    assert SECRET_CODE !="NOTSET","Secret Code is not set"
+except AssertionError as asserr:
+    print(f"Assertion Error : {asserr}")
+    sys.exit()
+except Exception as err:
+    print(f"Error : {err}")
+    sys.exit()
 
 @app.route("/")
 def index():
-    return "In God We Trust! The Alpha and the Omega.All others pay in Cash."
+    return f"In God We Trust! In {ENV} with secret Code {SECRET_CODE}"

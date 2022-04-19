@@ -10,7 +10,7 @@
 [Prerequisites](https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli)
 
 ## To run locally
-FLASK_ENV=development flask run
+ENV="DEV" SECRET_CODE="DOODAH" FLASK_ENV=development flask run
 
 ## Install Heroku CLI
 brew tap heroku/brew && brew install heroku
