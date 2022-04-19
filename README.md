@@ -22,8 +22,11 @@ heroku git:remote -a flask-heroku-exercise
 To Check : git remote -v
 <br>
 
-## Deploy
+## Deploy to Production
 (To be done after pushing GIT through CLI as above) <br>
+Set context to production <br>
+heroku git:remote -a flask-heroku-exercise <br>
+Push <br>
 git push heroku main 
 
 ## To Run
@@ -31,3 +34,16 @@ https://flask-heroku-exercise.herokuapp.com
 <br> OR <br>
 heroku run
 <br>
+
+# After changes
+push to github remote as usual <br>
+then <br>
+git push heroku main
+
+# When you have added a staging app to the pipeline
+First, create -staging app and assign to staging stage in pipeline<br>
+then Set context to staging <br>
+heroku git:remote -a flask-heroku-exercise-staging
+push to github remote as usual <br>
+then <br>
+git push heroku main

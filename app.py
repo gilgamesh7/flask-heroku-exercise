@@ -17,4 +17,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "In God We Trust! The Alpha and the Omega."
+    return "In God We Trust! The Alpha and the Omega.All others pay in Cash."
