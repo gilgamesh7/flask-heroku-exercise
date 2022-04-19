@@ -47,3 +47,6 @@ heroku git:remote -a flask-heroku-exercise-staging
 push to github remote as usual <br>
 then <br>
 git push heroku main
+
+# Logs
+heroku logs
